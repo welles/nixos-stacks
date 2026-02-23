@@ -16,7 +16,7 @@ services:
       jellyfin:
         ipv4_address: 10.10.1.10
     ports:
-      - 50100:8096/tcp
+      - 50010:8096/tcp
     volumes:
       - /mnt/bucket/apps/jellyfin/config:/config:rw
       - /mnt/bucket/apps/jellyfin/cache:/cache:rw
@@ -39,7 +39,7 @@ services:
       jellyfin:
         ipv4_address: 10.10.1.20
     ports:
-      - 50101:8056/tcp
+      - 50011:8056/tcp
     volumes:
       - /mnt/bucket/apps/jellyfin/jfa-go:/data:rw
       - /mnt/bucket/apps/jellyfin/config:/jf:rw
