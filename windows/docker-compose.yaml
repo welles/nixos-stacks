@@ -7,11 +7,11 @@ services:
       - /dev/kvm
       - /dev/net/tun
     environment:
-      VERSION: 11
+      VERSION: 2025
       DISK_SIZE: 128G
-      RAM_SIZE: 8G
-      CPU_CORES: 4
-      LANGUAGE: English
+      RAM_SIZE: 16G
+      CPU_CORES: 8
+      LANGUAGE: German
       REGION: de-DE
       KEYBOARD: de-DE
     env_file:
