@@ -7,14 +7,14 @@ services:
       ND_BASEURL: https://navidrome.welles.app
       ND_SCANNER_PURGEMISSING: always
       ND_SCANNER_SCHEDULE: "0 5 * * *"
+    env_file:
+      - /run/secrets/navidrome
     image: deluan/navidrome:latest
     networks:
       navidrome:
         ipv4_address: 10.10.3.10
     ports:
       - 50030:4533/tcp
-    secrets:
-      - navidrome
     volumes:
       - /mnt/bucket/apps/navidrome:/data
       - /mnt/tank/music:/music
@@ -27,7 +27,3 @@ networks:
     ipam:
       config:
         - subnet: 10.10.3.0/24
-
-secrets:
-  navidrome:
-    file: /run/secrets/navidrome
