@@ -11,7 +11,7 @@ services:
       DISK_SIZE: 128G
       RAM_SIZE: 16G
       CPU_CORES: 8
-      LANGUAGE: German
+      LANGUAGE: English
       REGION: de-DE
       KEYBOARD: de-DE
     env_file:
