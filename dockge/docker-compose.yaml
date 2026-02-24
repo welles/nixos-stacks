@@ -5,6 +5,12 @@ services:
     container_name: dockge
     environment:
       DOCKGE_STACKS_DIR: /mnt/bucket/stacks
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001"]
+      interval: 30s
+      retries: 3
+      start_period: 30s
+      timeout: 30s
     image: louislam/dockge:latest
     networks:
       dockge:
