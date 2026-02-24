@@ -20,10 +20,8 @@ services:
     volumes:
       - /mnt/bucket/apps/jellyfin/config:/config:rw
       - /mnt/bucket/apps/jellyfin/cache:/cache:rw
-      - /mnt/tank/movies:/media/Filme:rw
-      - /mnt/bucket/apps/jellyfin/empty:/media/Filme_v2:ro
-      - /mnt/tank/shows:/media/Serien:rw
-      - /mnt/bucket/apps/jellyfin/empty:/media/Serien_v2:ro
+      - /mnt/tank/movies:/media/movies:rw
+      - /mnt/tank/shows:/media/shows:rw
 
   jellyfin_accounts:
     container_name: jellyfin_accounts
@@ -43,7 +41,7 @@ services:
     ports:
       - 50011:8056/tcp
     volumes:
-      - /mnt/bucket/apps/jellyfin/jfa-go:/data:rw
+      - /mnt/bucket/apps/jellyfin/accounts:/data:rw
       - /mnt/bucket/apps/jellyfin/config:/jf:rw
 
 networks:
