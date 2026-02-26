@@ -27,7 +27,7 @@ services:
     stop_grace_period: 2m
     volumes:
       - /mnt/bucket/apps/windows/storage:/storage:rw
-      - /mnt/bucket/apps/windows/shared:/shared:rw
+      - /mnt/tank:/shared:rw
 
 networks:
   windows:
