@@ -21,6 +21,7 @@ services:
       - /mnt/bucket/stacks:/mnt/bucket/stacks
       - /mnt/bucket/apps/dockge:/app/data
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /run/secrets:/run/secrets:ro
 
 networks:
   dockge:
