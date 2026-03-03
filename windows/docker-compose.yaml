@@ -24,6 +24,7 @@ services:
       - 50050:8006/tcp
       - 50051:3389/tcp
       - 50051:3389/udp
+    restart: unless-stopped
     stop_grace_period: 2m
     volumes:
       - /mnt/bucket/apps/windows/storage:/storage:rw

@@ -17,6 +17,8 @@ services:
         ipv4_address: 10.10.4.10
     ports:
       - 50040:5001/tcp
+    restart: unless-stopped
+    stop_grace_period: 2m
     volumes:
       - /mnt/bucket/stacks:/mnt/bucket/stacks
       - /mnt/bucket/apps/dockge:/app/data

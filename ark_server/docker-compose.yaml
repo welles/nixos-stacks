@@ -22,6 +22,7 @@ services:
       - 50062:27020/tcp
       # Steam's server-list port
       - 50063:27015/udp
+    restart: unless-stopped
     stop_grace_period: 2m
     volumes:
       - /mnt/bucket/apps/ark_server/app:/app
