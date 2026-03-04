@@ -8,7 +8,8 @@ services:
       - /dev/net/tun
     environment:
       VERSION: 2025
-      DISK_SIZE: 512GB
+      DISK_SIZE: 128G
+      DISK2_SIZE: 1024G
       RAM_SIZE: 16G
       CPU_CORES: 8
       LANGUAGE: English
@@ -27,7 +28,8 @@ services:
     restart: unless-stopped
     stop_grace_period: 2m
     volumes:
-      - /mnt/tank/windows/storage:/storage:rw
+      - /mnt/bucket/apps/windows/storage:/storage:rw
+      - /mnt/tank/windows/storage2:/storage2:rw
       - /mnt/tank:/shared:rw
 
 networks:
