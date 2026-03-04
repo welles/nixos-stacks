@@ -14,6 +14,7 @@ services:
     ports:
       - 50070:3000/tcp
       - 50071:443/tcp
+    privileged: true
     restart: unless-stopped
     stop_grace_period: 2m
     volumes:
