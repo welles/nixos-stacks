@@ -1,8 +1,8 @@
 name: webtop
 
 services:
-  webtop_xfce:
-    container_name: webtop_xfce
+  webtop:
+    container_name: webtop
     devices:
       - /dev/dri:/dev/dri
     environment:
@@ -12,7 +12,7 @@ services:
       PIXELFLUX_WAYLAND: true
       DRINODE: /dev/dri/renderD128
       DRI_NODE: /dev/dri/renderD128
-    image: lscr.io/linuxserver/webtop:xfce
+    image: lscr.io/linuxserver/webtop:latest
     networks:
       webtop:
         ipv4_address: 10.10.8.10
