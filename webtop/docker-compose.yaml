@@ -1,8 +1,8 @@
 name: webtop
 
 services:
-  webtop:
-    container_name: webtop
+  webtop_ubuntu_xfce:
+    container_name: webtop_ubuntu_xfce
     devices:
       - /dev/dri:/dev/dri
     environment:
@@ -12,7 +12,7 @@ services:
       PIXELFLUX_WAYLAND: true
       DRINODE: /dev/dri/renderD128
       DRI_NODE: /dev/dri/renderD128
-    image: lscr.io/linuxserver/webtop:latest
+    image: lscr.io/linuxserver/webtop:ubuntu-xfce
     networks:
       webtop:
         ipv4_address: 10.10.8.10
@@ -23,7 +23,7 @@ services:
     shm_size: 1gb
     stop_grace_period: 2m
     volumes:
-      - /mnt/bucket/apps/webtop/xfce:/config:rw
+      - /mnt/bucket/apps/webtop/ubuntu_xfce:/config:rw
 
 networks:
   webtop:
